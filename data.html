@@ -100,6 +100,13 @@ oninput="shootVal${id}.innerText=this.value" id="shoot${id}">
 <input type="range" min="1" max="10" value="5" class="slider"
 oninput="defVal${id}.innerText=this.value" id="def${id}">
 
+
+<br><br>
+
+<label>Reliability: <span id="relVal${id}">5</span></label><br>
+<input type="range" min="1" max="10" value="5" class="slider"
+oninput="relVal${id}.innerText=this.value" id="def${id}">
+
 <textarea id="notes${id}" rows="3" placeholder="Notes"></textarea>
 
 </div>
@@ -136,6 +143,7 @@ function submitData(){
       passing: document.getElementById(`pass${i}`).value,
       shooting: document.getElementById(`shoot${i}`).value,
       defense: document.getElementById(`def${i}`).value,
+      reliability: document.getElementById(`rel${i}`).value,
       notes: document.getElementById(`notes${i}`).value
     });
   }
